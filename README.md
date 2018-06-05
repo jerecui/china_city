@@ -30,6 +30,8 @@
 
 ## 使用
 
+可以参考 https://github.com/saberma/china_city_example 示例代码。
+
 在页面中加入选择框，示例代码使用 slim 格式
 
 ```ruby
@@ -41,13 +43,16 @@
       option --城市--
     select.city-select
       option --地区--
-    select.street-select
+    select.city-select
       option --街道--
 ```
 
 请留意：所有选择框都要有 `city-select` class，并都包含于 class='city-group' 的 DOM 元素之下。
 
 选择后的值为国家地区编码，如深圳市的为 `440300`，可通过调用 `ChinaCity.get('440300')` 将编码转化为城市名称。
+
+### React 用户 [react-china-city](https://github.com/GeekPark/react-china-city)
+如果你使用 React 和 webpack/browserify 可以直接使用 `npm i react-china-city --save` 来进行前端接入。
 
 ## 更新
 
@@ -68,7 +73,7 @@ open http://localhost:3000/china_city
 
 ```bash
 brew install phantomjs    # http://git.io/vRJ1M
-rvm use 2.1
+rvm use 2.1               # Fixed: NoMethodError: undefined method `using' for GB2260::Division:Class
 rake appraisal:install
 rake appraisal:rails4 spec
 ```

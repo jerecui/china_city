@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    china_city (0.0.5)
-      jquery-rails (~> 4)
+    china_city (0.0.6)
+      jquery-rails (~> 3)
       rails (~> 4.0)
 
 GEM
   remote: https://ruby.taobao.org/
   specs:
-    GB2260 (0.2.1)
+    GB2260 (0.2.0)
     actionmailer (4.2.5)
       actionpack (= 4.2.5)
       actionview (= 4.2.5)
@@ -58,9 +58,10 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     cliver (0.3.2)
-    coffee-rails (4.1.1)
+    coderay (1.1.1)
+    coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0, < 5.1.x)
+      railties (>= 4.0.0, < 5.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -75,9 +76,8 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
-    jquery-rails (4.1.0)
-      rails-dom-testing (~> 1.0)
-      railties (>= 4.2.0)
+    jquery-rails (3.1.4)
+      railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
     launchy (2.4.3)
@@ -86,18 +86,23 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
     multi_xml (0.5.5)
-    nokogiri (1.6.7.1)
+    nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
     poltergeist (1.8.1)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -125,7 +130,8 @@ GEM
       activesupport (= 4.2.5)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.5.0)
+    rake (10.4.2)
+    redis (3.3.0)
     rspec-collection_matchers (1.1.2)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (2.99.2)
@@ -141,13 +147,14 @@ GEM
       rspec-core (~> 2.99.0)
       rspec-expectations (~> 2.99.0)
       rspec-mocks (~> 2.99.0)
-    sprockets (3.5.2)
+    slop (3.6.0)
+    sprockets (3.5.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.0.0)
-      actionpack (>= 4.0)
-      activesupport (>= 4.0)
-      sprockets (>= 3.0.0)
+    sprockets-rails (2.3.3)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.11)
     thor (0.19.1)
     thread_safe (0.3.5)
@@ -173,8 +180,10 @@ DEPENDENCIES
   json
   launchy
   poltergeist (~> 1.8)
+  pry
+  redis
   rspec-rails (~> 2.14)
   sqlite3 (~> 1.3)
 
 BUNDLED WITH
-   1.10.6
+   1.12.5
